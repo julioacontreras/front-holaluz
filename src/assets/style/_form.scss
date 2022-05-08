@@ -1,0 +1,25 @@
+input {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    font-size: $font-base;
+    display: flex;
+    align-items: center;
+}
+
+.input-text {
+    padding: $padding-base $padding-sm $padding-base $padding-base;
+    border-color: #ccc;
+    border-radius: $border-sm;
+    border-style: solid;
+    border-width: 1px;
+    background-color: $color-white;
+}
+
+label {
+    font-size: $font-base;
+    font-weight: $bold;
+    color: $color-black;
+}

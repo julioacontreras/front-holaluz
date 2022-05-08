@@ -1,0 +1,54 @@
+.btn-primary {
+    /* animation */
+    transition: all 0.5s;
+
+    /* display & box model */
+    padding: $padding-sm $padding-lg $padding-sm $padding-lg;  /* top right botton left */
+
+    /* positioning */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* decoration & typography */
+    border: none;
+    border-radius: $border-base;
+    background-color: $color-primary;
+    color: $color-white;
+    font-size: $font-base;
+    font-weight: $bold;
+    text-decoration: none;
+    outline: none;
+    &:hover {
+        box-shadow: 0 0 5px $color-primary-2;
+    }
+}
+
+.btn-primary-lg {
+    @extend .btn-primary;
+    width: 100%;   
+    padding: $padding-base 0 $padding-base 0;
+    font-size: $font-lg;
+}
+
+.btn-reverse {
+    @extend .btn-primary;
+
+    /* decoration & typography */
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color-primary;
+    background-color: $color-white;
+    color: $color-primary;
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+    }
+}
+
+.btn-reverse-lg {
+    @extend .btn-reverse;
+    width: 100%;   
+    padding: $padding-base 0 $padding-base 0;
+    font-size: $font-lg;
+}
