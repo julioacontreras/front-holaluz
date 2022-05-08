@@ -1,7 +1,7 @@
 
 import { describe, it, expect } from 'vitest';
 import { shallowMount } from '@vue/test-utils'
-import Header from '@/components/header.vue'
+import Header from '@/components/headerComponent.vue'
 
 describe('Header', () => {
   it('renders props.isVisibleLogout when passed', () => {
@@ -9,11 +9,11 @@ describe('Header', () => {
     const wrapper = shallowMount(Header, {
       propsData: { isVisibleLogout }
     })
-    expect(wrapper.props.isVisibleLogout).toBe(isVisibleLogout)
+    expect(wrapper.componentVM.isVisibleLogout).toBe(isVisibleLogout)
   })
 
   it('renders default isVisibleLogout false', () => {
     const wrapper = shallowMount(Header)
-    expect(wrapper.props.isVisibleLogout).toBe(false)
+    expect(wrapper.componentVM.isVisibleLogout).toBe(false)
   })
 })
