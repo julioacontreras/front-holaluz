@@ -18,6 +18,18 @@ input {
     background-color: $color-white;
 }
 
+.input-search {
+    padding: 0 $padding-sm $padding-base $padding-base;
+    border-color: #ccc;
+    border-radius: $border-sm;
+    border-style: solid;
+    border-width: 1px;
+    background-color: $color-white;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
 label {
     font-size: $font-base;
     font-weight: $bold;
