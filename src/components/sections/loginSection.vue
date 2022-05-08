@@ -62,19 +62,23 @@ export default {
   },
   methods: {
     async login(email, password) {
+      this.notFoundUser = false;
       try {
-        const response = await apiLogin(email, password);
-        if (response.data?.status === "ok") {
-          this.$router.push("/client-zone");
+        const response = await this.checkLogin(email, password);
+        if (response.data.status === "ok") {
+          this.$router.push('/client-zone');
         } else {
-          this.notFoundUser = true;
-          console.log(this.notFoundUser);
-          setTimeout(() => (this.notFoundUser = false), 3000);
+          this.$nextTick(function () {
+            this.notFoundUser = true
+          })
         }
       } catch (e) {
-        console.error("Something wrong happen");
-      }
+        console.error(`Something wrong happen, ${e}`);
+      } 
     },
+    async checkLogin(email, password) {
+      return await apiLogin(email, password)    
+    }
   },
 };
 </script>
