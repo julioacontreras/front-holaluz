@@ -21,7 +21,7 @@
 
 <script>
 import StatusComponent from "./statusComponent.vue";
-import getSolarRoofPricesByCUP from "@/api/getSolarRoofPricesByCUP";
+import getSolarRoofPricesByCUPS from "@/api/getSolarRoofPricesByCUPS";
 
 export default {
   components: {
@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     async onSearch(cups) {
-      const response = await getSolarRoofPricesByCUP(cups);
+      const response = await getSolarRoofPricesByCUPS(cups);
       if (response.data.status === "ok") {
         this.solarRoofStatus = response.data.result;
       }
