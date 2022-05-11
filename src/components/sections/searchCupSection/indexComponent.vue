@@ -9,7 +9,7 @@
         <input
           v-model="cups"
           type="tel"
-          placeholder="Escribe el nombre de tu calle"
+          placeholder="Código CUPS ex:123456"
           @keyup.enter="onSearch(cups)"
         >
         <button

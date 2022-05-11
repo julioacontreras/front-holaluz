@@ -22,7 +22,6 @@ export default defineConfig({
     port: 3010
   },
   test: {
-    global: true,
     environment: "jsdom"
   }
 })

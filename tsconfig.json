@@ -28,9 +28,7 @@
     },
     "include": [
       "src/**/*.ts",
-      "src/**/*.tsx",
-      "src/**/*.vue",
-      "src/routes/index.js"
+      "src/**/*.vue"
     ],
     "exclude": [
       "src/main.js",
